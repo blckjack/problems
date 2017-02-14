@@ -15,7 +15,6 @@ def queenRule(x, y):
             attackMap.append("*")
         if y + 1 < 9:
             attackMap.append("*")
-        
 
 def knightRule(x, y):
     knightMap = []

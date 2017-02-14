@@ -29,7 +29,7 @@ def checkQueen(cc):
 
 def checkTower(cc):
     """
-    check that tower can reach b from a
+    check that tower can reach B from A
     return T or F
     """
     pass

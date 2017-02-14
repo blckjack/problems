@@ -9,11 +9,11 @@ def countNoFightZone():
         y = 1
         while y < 9:
             cc = (x, y)
-            if checkQueen(Q, cc):
+            if checkQueen(Q, cc) and checkQueen(Q, cc) != checkKnight(K, cc) and checkQueen(Q, cc) != checkTower(T, cc):
                 N += 1
-            if checkKnight(K, cc):
+            if checkKnight(K, cc) and checkKnight(K, cc) != checkQueen(Q, cc) and checkKnight(K, cc) != checkTower(T, cc):
                 N += 1
-            if checkTower(T, cc):
+            if checkTower(T, cc) and checkTower(T, cc) != checkQueen(Q, cc) and checkTower(T, cc) != checkKnight(K, cc):
                 N += 1
             y = y + 1
         x = x + 1

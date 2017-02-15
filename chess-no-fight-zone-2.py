@@ -1,6 +1,12 @@
-Q = (4, 1)
-T = (4, 3)
-K = (5, 5)
+import sys
+
+QTK = sys.stdin.readline().strip().split()
+
+Q,T,K = map(lambda C: (ord(C[0])-ord("A")+1, int(C[1])), QTK)
+
+# Q = (4, 1)
+# T = (4, 3)
+# K = (5, 5)
 
 def countNoFightZone():
     N = 0
@@ -10,10 +16,11 @@ def countNoFightZone():
         while y < 9:
             target = (x, y)
             if checkKnight(K, target) or checkQueen(Q, target) or checkTower(T, target):
-                N += 1
+                if Q != target and T != target and K != target:
+                    N += 1
             y = y + 1
         x = x + 1
-    print N
+    print (N)
 
 
 def checkQueen(Q, target):

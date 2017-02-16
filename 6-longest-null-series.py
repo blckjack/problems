@@ -12,8 +12,6 @@ while i != len(S):
         if C < count:
             C = count
     if S[i] == '1':
-        if C < count:
-            C = count
         count = 0
     i += 1
 

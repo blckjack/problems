@@ -8,6 +8,8 @@ i = int(f_in.readline())
 # print(summa)
 
 if i > 0:
-    print(int((1+i) * (i/2)))
-else:
-    print(int((1-i) * (i/2)))
+    print(((1+i) * i//2))
+if i < 0:
+    print(((-i+1) * i)//2+1)
+if i == 0:
+    print(1)

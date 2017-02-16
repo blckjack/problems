@@ -5,6 +5,7 @@ QTK = sys.stdin.readline().strip().split()
 
 Q,T,K = map(lambda C: (ord(C[0])-ord("A")+1, int(C[1])), QTK)
 
+
 def countNoFightZone():
     N = 0
     x = 1
@@ -25,6 +26,7 @@ def checkQueen(Q, target):
         return True
     else:
         return False
+
 
 def checkTower(T, target):
     x = T[0]
@@ -87,6 +89,7 @@ def checkBishop(B, target):
         if (x, y) == target:
             return True
 
+
 def checkKnight(K, target):
     x = K[0]
     y = K[1]
@@ -94,29 +97,6 @@ def checkKnight(K, target):
     for place in places:
         if (x + place[0], y + place[1]) == target:
             return True
-    # if (x+2, y+1) == target:
-    #     return True
-
-    # if (x+1, y+2) == target:
-    #     return True
-
-    # if (x+1, y-2) == target:
-    #     return True
-
-    # if (x+2, y-1) == target:
-    #     return True
-
-    # if (x-2, y+1) == target:
-    #     return True
-
-    # if (x-1, y+2) == target:
-    #     return True
-
-    # if (x-1, y-2) == target:
-    #     return True
-
-    # if (x-2, y-1) == target:
-    #     return True
     return False
 
 countNoFightZone()

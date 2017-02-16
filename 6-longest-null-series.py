@@ -18,7 +18,3 @@ while i != len(S):
     i += 1
 
 print (C)
-
-
-# wrong answer when last symbols is 0
-

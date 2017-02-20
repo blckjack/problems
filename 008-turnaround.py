@@ -8,4 +8,4 @@ i = N[0] - 1
 while i > -1:
     AAA.append(str(AA[i]))
     i -= 1
-print (' '.join(AAA))
+print(' '.join(AAA))

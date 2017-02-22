@@ -5,7 +5,7 @@ AA = [int(s) for s in f_in.readline().strip().split()]
 
 i = 0
 count = 0
-while i < len(AA) - 1:
+while i < len(AA):
     if AA[i] > AA[i+1]:
         p = AA[i+1]
         AA[i+1] = AA[i]

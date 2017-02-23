@@ -2,7 +2,6 @@
 f_in = open("INPUT.txt")
 N = [int(s) for s in f_in.readline().strip().split()]
 AA = [[int(s) for s in line.split()] for line in f_in]
-
 i = 0
 while i < len(AA) - 1:
     if AA[i] > AA[i+1]:
@@ -12,5 +11,9 @@ while i < len(AA) - 1:
         i = -1
     i += 1
 
-while i < len(AA):
-    a = AA[0]
+k = 0
+while k < len(AA):
+    print(" ".join(map(str, AA[k])))
+    k += 1
+
+

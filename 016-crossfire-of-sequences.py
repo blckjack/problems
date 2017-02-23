@@ -10,21 +10,31 @@ while i < len(first_sequence):
     k = 0
     while k < len(second_sequence):
         if first_sequence[i] == second_sequence[k]:
-            if first_sequence[i] not in final_sequence:
-                final_sequence.append(first_sequence[i])
-                n = 0
-                while n < len(final_sequence):
-                    sp = n
-                    minimal_value = 100000000
-                    while sp < len(final_sequence):
-                            if final_sequence[sp] < minimal_value:
-                                minimal_value = final_sequence[sp]
-                                minimal_value_index = sp
-                            sp += 1
-                    t = final_sequence[n]
-                    final_sequence[n] = minimal_value
-                    final_sequence[minimal_value_index] = t
-                    n += 1
+            final_sequence.append(first_sequence[i])
         k += 1
     i += 1
-print(" ".join(map(str, final_sequence)))
+
+n = 0
+while n < len(final_sequence):
+    sp = n
+    minimal_value = 100000000
+    while sp < len(final_sequence):
+        if final_sequence[sp] < minimal_value:
+            minimal_value = final_sequence[sp]
+            minimal_value_index = sp
+        sp += 1
+    t = final_sequence[n]
+    final_sequence[n] = minimal_value
+    final_sequence[minimal_value_index] = t
+    n += 1
+
+n = 0
+previous = -1
+last_sequence = []
+while n < len(final_sequence):
+    if final_sequence[n] != previous:
+        last_sequence.append(final_sequence[n])
+        previous = final_sequence[n]
+    n += 1
+
+print(" ".join(map(str, last_sequence)))

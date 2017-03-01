@@ -7,7 +7,7 @@ gorgons_wealth = int(f_in.readline().strip())
 i = 0
 while i < n:
     k = i
-    poorest_wealth = 100000000
+    poorest_wealth = 1000000000
     while k < n:
         if bridegrooms_wealth[k] < poorest_wealth:
             poorest_wealth = bridegrooms_wealth[k]

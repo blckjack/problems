@@ -6,7 +6,7 @@ A = [int(s) for s in f_in.readline().strip().split()]
 i = 0
 while i < n:
     k = i
-    minimum = 10000000
+    minimum = 30000
     while k < n:
         if A[k] < minimum:
             minimum = A[k]

@@ -7,16 +7,14 @@ P = sp[1]
 # more efficient way to solve:
 x = 1
 while x < S//2 + 1:
-    y = S//2 + 1
-    while y < S:
-        if P == x * y:
-            if x > y:
-                print(y, x)
-                break
-            if x <= y:
-                print(x, y)
-                break
-        y += 1
+    y = S - x
+    if P == x * y:
+        if x > y:
+            print(y, x)
+            break
+        if x <= y:
+            print(x, y)
+            break
     x += 1
 
 # alpha ver.:

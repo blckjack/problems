@@ -9,8 +9,8 @@ BB = B[:]
 i = 0
 while i < N[0]:
     minimum = i
-    minimum_powered_staff = 10000000
-    minimum_powered_ring = 10000000
+    minimum_powered_staff = 2147483648
+    minimum_powered_ring = 2147483648
     # find minimum values in two arrays:
     while minimum < N[0]:
         if AA[minimum] < minimum_powered_staff:

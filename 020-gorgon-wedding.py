@@ -1,3 +1,4 @@
+# http://acmp.ru/asp/do/index.asp?main=task&id_course=1&id_section=7&id_topic=118&id_problem=731
 f_in = open("INPUT.txt")
 n = int(f_in.readline().strip())
 bridegrooms_wealth = [int(s) for s in f_in.readline().strip().split()]

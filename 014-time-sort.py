@@ -8,22 +8,32 @@ while i < N[0]:
     i += 1
 
 
-# they solution, if we couldn't compare lists easily:
+# other solution, if we couldn't compare lists easily:
 def ordered(a, b):
-    if len(a) == len(b):
-        i = 0
-        while i < len(a):
-            if a > b:
+    if a[0] < b[0]:
+        return True
+    if a[0] > b[0]:
+        return False
+    if a[0] == b[0]:
+        if a[1] < b[1]:
+            return True
+        if a[1] > b[1]:
+            return False
+        if a[1] == b[1]:
+            if a[2] < b[2]:
+                return True
+            if a[2] > b[2]:
                 return False
-            i += 1
-    return True
+            if a[2] == b[2]:
+                return True
 
 i = 0
 while i < N[0]:
-    k = i
     minimum = [24, 00, 00]
+    k = i
+    minimum_index = k
     while k < N[0]:
-        if ordered(AA[i], AA[k]) is False:
+        if not ordered(AA[i], AA[k]):
             minimum = AA[k]
             minimum_index = k
         k += 1

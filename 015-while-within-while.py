@@ -1,26 +1,24 @@
 f_in = open("INPUT.txt")
-A = [int(s) for s in f_in.readline().strip().split()]
+n = [int(s) for s in f_in.readline().strip().split()]
 
+# build sequence A:
+A = []
+i = n[0]
+while i <= n[1]:
+    A.append(i)
+    i += 1
+# build sequence B:
 B = []
-C = [A[2], A[3]]
-i = 0
-b = 0
-while b < len(A)//2:
-    B.append(A[b])
-    b += 1
-
-print(B)
-
-
-# A = [int(s) for s in f_in.readline().strip().split()]
-# B = [int(s) for s in f_in.readline().strip().split()]
-
-# k = 0
-# i = 0
-# while i <= len(A) - 1:
-#     k = 0
-#     while k <= len(B) - 1:
-#         z = int(str(A[i]) + str(B[k]))
-#         k += 1
-#         print(z,)
-#     i += 1
+k = n[2]
+while k <= n[3]:
+    B.append(k)
+    k += 1
+# build compared sequence z:
+ii = 0
+while ii < len(A):
+    kk = 0
+    while kk < len(B):
+        z = int(str(A[ii]) + str(B[kk]))
+        kk += 1
+        print(z,)
+    ii += 1

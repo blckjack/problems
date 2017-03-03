@@ -9,7 +9,7 @@ while i < N[0]:
 
 
 # other solution, if we couldn't compare lists easily:
-def ordered(a, b):
+def less(a, b):
     if a[0] < b[0]:
         return True
     if a[0] > b[0]:
@@ -33,7 +33,7 @@ while i < N[0]:
     k = i
     minimum_index = k
     while k < N[0]:
-        if not ordered(AA[i], AA[k]):
+        if not less(AA[i], AA[k]):
             minimum = AA[k]
             minimum_index = k
         k += 1

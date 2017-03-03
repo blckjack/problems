@@ -9,14 +9,13 @@ def modify_array(v):
     v = [s for s in str(v[0])]
     if v[0] == '-':
         v.remove(v[0])
-        negative += 1
-    return v
+        negative = 1
+    return (v, negative)
 
 
 def increase_value(v):
     i = 0
-    negative = 0
-    v = modify_array(v)
+    v, negative = modify_array(v)
     while i < len(v):
         k = i
         maximum = -1000000000
@@ -31,14 +30,13 @@ def increase_value(v):
         i += 1
     v = "".join(str(x) for x in v)
     if negative == 1:
-        v = v * -1
+        v = '-' + v
     return int(v)
 
 
 def decrease_value(v):
     i = 0
-    negative = 0
-    v = modify_array(v)
+    v, negative = modify_array(v)
     while i < len(v):
         k = i
         minimum = 1000000000
@@ -53,7 +51,7 @@ def decrease_value(v):
         i += 1
     v = "".join(str(x) for x in v)
     if negative == 1:
-        v = v * -1
+        v = '-' + v
     return int(v)
 
 if a[0] > 0 and b[0] > 0:

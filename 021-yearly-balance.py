@@ -38,7 +38,7 @@ def increase_value(v):
 def decrease_value(v):
     i = 0
     negative = 0
-    modify_array(v)
+    v = modify_array(v)
     while i < len(v):
         k = i
         minimum = 1000000000

@@ -3,6 +3,9 @@ f_in = open("INPUT.txt")
 a = [int(s) for s in f_in.readline().strip().split()]
 b = [int(s) for s in f_in.readline().strip().split()]
 
+'-60102'
+'-20021'
+
 
 def modify_array(v):
     negative = 0
@@ -58,7 +61,9 @@ if a[0] > 0 and b[0] > 0:
     black_income = increase_value(a) - decrease_value(b)
 if a[0] < 0 and b[0] < 0:
     black_income = decrease_value(a) - increase_value(b)
+if a[0] == b[0]:
+    black_income = increase_value(a) - decrease_value(b)
 else:
     black_income = increase_value(a) - increase_value(b)
 
-print(black_income)
+print(decrease_value(a), increase_value(b))

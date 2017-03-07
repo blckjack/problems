@@ -8,7 +8,7 @@ count = [0]*201
 i = 0
 while i < n:
     # { i }
-    if -101 < t[i] and t[i] < 101:
+    if -100 <= t[i] <= 100:
         if t[i] > 0:
             count[100 + t[i]] += 1
         if t[i] < 0:

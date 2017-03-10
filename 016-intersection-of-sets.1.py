@@ -8,12 +8,6 @@ from random import randint
 # dump = [0]*100000
 # result = []
 
-# n = [11, 6]
-# first_sequence = [2, 4, 10000, 8, 10, 12, 0, 8, 6, 4, 2]
-# second_sequence = [3, 6, 9, 10000, 15, 1, 0]
-#dump = [0]*100000
-# result = []
-
 
 def sort(A):
     permutation_found = True

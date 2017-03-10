@@ -1,9 +1,9 @@
-#http://acmp.ru/index.asp?main=task&id_task=19
+#  http://acmp.ru/index.asp?main=task&id_task=19
 import sys
 
 QTK = sys.stdin.readline().strip().split()
 
-Q,T,K = map(lambda C: (ord(C[0])-ord("A")+1, int(C[1])), QTK)
+Q, T, K = map(lambda C: (ord(C[0])-ord("A")+1, int(C[1])), QTK)
 
 
 def countNoFightZone():
@@ -54,6 +54,7 @@ def checkTower(T, target):
         x -= 1
         if (x, y) == target:
             return True
+
 
 def checkBishop(B, target):
 

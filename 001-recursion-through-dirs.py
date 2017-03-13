@@ -1,6 +1,8 @@
 import os
 
 list_of_dirs = []
+
+
 def get_list_of_dirs(directory):
     for item in os.listdir(directory):
         full_path = os.path.join(directory, item)
@@ -11,6 +13,3 @@ def get_list_of_dirs(directory):
 get_list_of_dirs("/tmp/")
 
 print list_of_dirs
-
-
-#recursive_crawl(url, depth) -> list of urls

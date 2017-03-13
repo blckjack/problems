@@ -18,19 +18,8 @@ def nearestSpots(t):
             rk = result[k]
         k -= 1
         i -= 1
-    i = 0
-    while i < len(t):
-        if t[i] == ri:
-            minimum_i = i + 1
-        if t[i] == rk:
-            minimum_k = i + 1
-        i += 1
 
     print(d)
-    if ri > rk:
-        print(minimum_k, minimum_i)
-    if rk > ri:
-        print(minimum_i, minimum_k)
 
 
 def sort(t):
@@ -43,16 +32,16 @@ def sort(t):
 def merge(t1, t2):
     result = []
     i = 0
-    j = i
-    while i < len(t1) and j < len(t2):
-        if t1[i] < t2[j]:
+    k = i
+    while i < len(t1) and k < len(t2):
+        if t1[i] < t2[k]:
             result.append(t1[i])
             i += 1
         else:
-            result.append(t2[j])
-            j += 1
+            result.append(t2[k])
+            k += 1
     result += t1[i:]
-    result += t2[j:]
+    result += t2[k:]
     return result
 
 nearestSpots(t)

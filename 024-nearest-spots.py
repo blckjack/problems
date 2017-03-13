@@ -4,18 +4,33 @@ n = int(f_in.readline().strip())
 t = [int(s) for s in f_in.readline().strip().split()]
 
 
+# TODOTHISUGLYCODEBELOW :(
 def nearestSpots(t):
     result = sort(t)
+    i = len(result) - 1
+    k = i - 1
+    minimum = 10000000000
+    while 0 < i:
+        d = result[i] - result[k]
+        if d <= minimum:
+            minimum = d
+            ri = result[i]
+            rk = result[k]
+        k -= 1
+        i -= 1
     i = 0
     while i < len(t):
-        if t[i] == result[0]:
-            k = 0
-            while k < len(t):
-                if t[k] == result[1]:
-                    print(abs(result[1] - result[0]))
-                    print(i+1, k+1)
-                k += 1
+        if t[i] == ri:
+            minimum_i = i + 1
+        if t[i] == rk:
+            minimum_k = i + 1
         i += 1
+
+    print(d)
+    if ri > rk:
+        print(minimum_k, minimum_i)
+    if rk > ri:
+        print(minimum_i, minimum_k)
 
 
 def sort(t):
@@ -27,7 +42,8 @@ def sort(t):
 
 def merge(t1, t2):
     result = []
-    i = j = 0
+    i = 0
+    j = i
     while i < len(t1) and j < len(t2):
         if t1[i] < t2[j]:
             result.append(t1[i])

@@ -35,7 +35,8 @@ def sort(t):
 
 def merge(t1, t2):
     result = []
-    i = j = 0
+    i = 0
+    j = i
     while i < len(t1) and j < len(t2):
         if t1[i] < t2[j]:
             result.append(t1[i])

@@ -5,7 +5,7 @@ a = [int(s) for s in f_in.readline().strip().split()]
 
 
 i = 0
-dump = [0]*1000000
+dump = [0]*2000000
 while i < len(a):
     f = a[i]
     dump[f] += 1

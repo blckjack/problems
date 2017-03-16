@@ -1,6 +1,4 @@
-2 2
-BW
-BB
-
-WW
-BW
+BWWB
+BWBW
+BWWB
+WBBW

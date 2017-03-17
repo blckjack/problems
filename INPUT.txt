@@ -1,4 +1,5 @@
-BWWB
-BWBW
-BWWB
-WBBW
+4 3
+***
+...
+...
+***

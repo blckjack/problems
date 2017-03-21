@@ -53,7 +53,7 @@ def partition(list, start, end):
             if j == i:
                 done = 1
                 break
-        
+
         while not done:
             i -= 1
 
